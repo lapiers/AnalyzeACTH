@@ -17,8 +17,22 @@ write.csv(IBS1, "data_output/output.csv")
 ##  http://r-statistics.co/Linear-Regression.html
 
 ## Single Regression Test
-single.regression <- lm(BMI ~ ACTH, data=IBS1)
+ACTH.regression <- lm(BMI ~ ACTH, data=IBS1)
 summary(single.regression)
+
+## Output the results to a file
+## http://www.cookbook-r.com/Data_input_and_output/Writing_text_and_output_from_analyses_to_a_file/
+sink('data_output/ACTH_regression.txt', append = TRUE)
+print(ACTH.regression)
+sink()
+
+## ANOVA: IBS-subtype vs. Bloodwork parameter
+## http://www.sthda.com/english/wiki/one-way-anova-test-in-r
+ACTH.aov <- aov(ACTH ~ IBS.subtype, data = IBS1)
+summary(ACTH.aov)
+sink('data_output/ACTH_anova.txt', append = TRUE)
+print(ACTH.aov)
+sink()
 
 ## Scatterplots
 ## https://www.statmethods.net/graphs/scatterplot.html
@@ -26,6 +40,29 @@ summary(single.regression)
 ggplot(IBS1, aes(x=BMI, y=ACTH)) +
   geom_point() +    
   geom_smooth(method=lm) 
+
+png("fig_output/ACTH_scatterplot.png")
+ACTH_scatterplot <- ggplot(IBS1, aes(x = BMI, y = ACTH)) +
+  geom_point() +    
+  geom_smooth(method = lm) 
+
+print(ACTH_scatterplot)
+dev.off()
+
+## Box plots
+## https://www.statmethods.net/graphs/boxplot.html
+
+png("fig_output/ACTH_boxplot.png")
+ACTH_boxplot <- boxplot(ACTH ~ IBS.subtype, data = IBS1, main="ACTH by IBS subtype", 
+                       xlab = "IBS.subtype", ylab = "ACTH"
+)
+print(ACTH_boxplot)
+dev.off()
+
+
+boxplot(ACTH ~ IBS.subtype, data = IBS1, main="ACTH by IBS subtype", 
+        xlab = "IBS.subtype", ylab = "ACTH"
+)
 
 ## 3D scatterplot for the most significant 3-variable multiple regression model
 ## http://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
