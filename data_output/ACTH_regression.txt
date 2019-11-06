@@ -1,0 +1,36 @@
+
+Call:
+lm(formula = BMI ~ ACTH, data = IBS1)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-8.042 -4.613 -1.519  3.152 19.772 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 25.54064    1.11028  23.004   <2e-16 ***
+ACTH         0.06610    0.05056   1.307    0.194    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.037 on 106 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.01587,	Adjusted R-squared:  0.006587 
+F-statistic: 1.709 on 1 and 106 DF,  p-value: 0.1939
+
+
+Call:
+lm(formula = BMI ~ ACTH, data = IBS1)
+
+Coefficients:
+(Intercept)         ACTH  
+    25.5406       0.0661  
+
+
+Call:
+lm(formula = BMI ~ ACTH, data = IBS1)
+
+Coefficients:
+(Intercept)         ACTH  
+    25.5406       0.0661  
+
