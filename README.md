@@ -8,20 +8,20 @@ Data (RobinsonEtAl_Sup1.csv) was downloaded from:
 Robinson, JM. et al. 2019. Complete blood count with differential: An effective diagnostic for IBS subtype in the context of BMI? BioRxiv. doi: https://doi.org/10.1101/608208.
 
 ##
-### Results of single regression, BMI x Serum Cortisol
+### Results of ACTH regression, BMI x ACTH
 ```
-> single.regression <- lm(BMI ~ SerumCortisol, data=IBS1)
-> print(single.regression)
+> ACTH.regression <- lm(BMI ~ ACTH, data=IBS1)
+> print(ACTH.regression)
 
 Call:
-lm(formula = BMI ~ SerumCortisol, data = IBS1)
+lm(formula = BMI ~ ACTH, data = IBS1)
 
 Coefficients:
   (Intercept)  SerumCortisol  
       31.9454        -0.5004  
 ```
 ```
-ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
+ggplot(IBS1, aes(x=BMI, y=ACTH)) +
   geom_point() +    
   geom_smooth(method=lm) 
 ```
@@ -29,11 +29,11 @@ ggplot(IBS1, aes(x=BMI, y=SerumCortisol)) +
 ##
 ### Results of single regression, BMI x C-Reactive Protein (CRP)
 ```
-> single.regression <- lm(BMI ~ CRP, data=IBS1)
-> print(single.regression)
+> ACTH.regression <- lm(BMI ~ CRP, data=IBS1)
+> print(ACTH.regression)
 
 Call:
-lm(formula = BMI ~ SerumCortisol + CRP, data = IBS1)
+lm(formula = BMI ~ ACTH + CRP, data = IBS1)
 
 Coefficients:
   (Intercept)  SerumCortisol            CRP  
@@ -46,7 +46,7 @@ Coefficients:
 ##
 ### Results of multiple regression, BMI x Serum Cortisol + C-Reactive Protein (CRP)
 ```
-> fit1 <- lm(BMI ~ SerumCortisol + CRP, data=IBS1)
+> fit1 <- lm(BMI ~ ACTH + CRP, data=IBS1)
 > summary(fit1)
 
 Call:
