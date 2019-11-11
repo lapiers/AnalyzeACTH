@@ -6,14 +6,13 @@
 
 
 ## Normal range og ACTH
-```
 Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to below 5-10 pg/ml at midnight.
 ```
 
 
-
-## Install necessary packages
 ```
+## Install necessary packages
+
 > install.packages("ggplot2")
 > library(ggplot2)
 ```
@@ -21,7 +20,6 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 
 ```
 ## Read data
-```
 > IBS1 <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
 > head(IBS1)
 > write.csv(IBS1, "data_output/output.csv")
@@ -30,9 +28,10 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 > IBS1$ACTH_result <- "NA"
 ```
 
+```
 ## Assign "HIGH", "NORMAL", or "LOW" based on clinical range to the LDH_result parameter
 ##https://www.uptodate.com/contents/measurement-of-acth-crh-and-other-hypothalamic-and-pituitary-peptides
-```
+
 > IBS1$ACTH_result[IBS1$ACTH > 60] <- "HIGH"
 
 > IBS1$ACTH_result[IBS1$ACTH <= 60 & IBS1$ACTH >= 10] <- "NORMAL"
@@ -40,7 +39,7 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 > IBS1$ACTH_result[IBS1$ACTH < 10] <- "LOW"
 
 > write.csv(IBS1, "data_output/ACTH_result.csv")
-
+```
 ```
 
 ##
@@ -64,21 +63,18 @@ ggplot(IBS1, aes(x=BMI, y=ACTH)) +
 
 
 ## Single Regression Test
-```
 ACTH.regression <- lm(BMI ~ ACTH, data=IBS1)
 summary(ACTH.regression)
 ```
 
-
+```
 ## Output the results to a file
 ## http://www.cookbook-r.com/Data_input_and_output/Writing_text_and_output_from_analyses_to_a_file/
-```
 sink('data_output/ACTH_regression.txt', append = TRUE)
 print(ACTH.regression)
 sink()
+
 ```
-
-
 ```
 ##
 ## ANOVA: IBS-subtype vs. Bloodwork parameter
