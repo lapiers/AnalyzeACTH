@@ -17,8 +17,8 @@ Call:
 lm(formula = BMI ~ ACTH, data = IBS1)
 
 Coefficients:
-  (Intercept)  SerumCortisol  
-      31.9454        -0.5004  
+(Intercept)         ACTH  
+    25.5406       0.0661  
 ```
 ```
 ggplot(IBS1, aes(x=BMI, y=ACTH)) +
@@ -36,8 +36,8 @@ Call:
 lm(formula = BMI ~ ACTH + CRP, data = IBS1)
 
 Coefficients:
-  (Intercept)  SerumCortisol            CRP  
-      30.7936        -0.5231         0.6042  
+(Intercept)         ACTH  
+    25.5406       0.0661  
 
 ```
 
