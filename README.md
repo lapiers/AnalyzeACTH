@@ -56,3 +56,5 @@ Coefficients:
 > boxplot(ACTH ~ IBS.subtype, data = IBS1, main="ACTH by IBS subtype", 
         xlab = "IBS.subtype", ylab = "ACTH"
 )
+
+![ACTH_boxplot](../AnalyzeACTH/fig_output/ACTH_boxplot.png?sanitize=true)
