@@ -25,6 +25,16 @@ ggplot(IBS1, aes(x=BMI, y=ACTH)) +
   geom_smooth(method=lm) 
 ```
 ##
+## ANOVA: IBS-subtype vs. Bloodwork parameter
+ACTH.aov <- aov(ACTH ~ IBS.subtype, data = IBS1)
+summary(ACTH.aov)
+sink('data_output/ACTH_anova.txt', append = TRUE)
+print(ACTH.aov)
+sink()
+
+
+
+##
 ### Results of single regression, BMI x C-Reactive Protein (CRP)
 ```
 > ACTH.regression <- lm(BMI ~ CRP, data=IBS1)
