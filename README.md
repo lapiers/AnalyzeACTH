@@ -7,9 +7,9 @@
 
 ## Normal range og ACTH
 Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to below 5-10 pg/ml at midnight.
-
-
 ```
+
+
 ```
 ## Install necessary packages
 
@@ -40,7 +40,7 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 
 > write.csv(IBS1, "data_output/ACTH_result.csv")
 ```
-
+```
 
 ##
 ### Results of ACTH regression, BMI x ACTH
