@@ -39,7 +39,7 @@ Coefficients:
 
 ```
 
-![ACTH_scatterplot](../AnalyzeACTH/blob/master/fig_output/ACTH_scatterplot.png?sanitize=true)
+![ACTH_scatterplot](..lapiers/AnalyzeACTH/blob/master/fig_output/ACTH_scatterplot.png?sanitize=true)
 
 ##
 ##
