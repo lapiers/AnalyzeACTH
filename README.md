@@ -13,31 +13,31 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 
 ## Install necessary packages
 
-install.packages("ggplot2")
-library(ggplot2)
+> install.packages("ggplot2")
+> library(ggplot2)
 
 
 ```
 ```
 ## Read data
-IBS1 <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
-head(IBS1)
-write.csv(IBS1, "data_output/output.csv")
+> IBS1 <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
+> head(IBS1)
+> write.csv(IBS1, "data_output/output.csv")
 
 
-IBS1$ACTH_result <- "NA"
+> IBS1$ACTH_result <- "NA"
 ```
 ```
 ## Assign "HIGH", "NORMAL", or "LOW" based on clinical range to the LDH_result parameter
 ##https://www.uptodate.com/contents/measurement-of-acth-crh-and-other-hypothalamic-and-pituitary-peptides
 
-IBS1$ACTH_result[IBS1$ACTH > 60] <- "HIGH"
+> IBS1$ACTH_result[IBS1$ACTH > 60] <- "HIGH"
 
-IBS1$ACTH_result[IBS1$ACTH <= 60 & IBS1$ACTH >= 10] <- "NORMAL"
+> IBS1$ACTH_result[IBS1$ACTH <= 60 & IBS1$ACTH >= 10] <- "NORMAL"
 
-IBS1$ACTH_result[IBS1$ACTH < 10] <- "LOW"
+> IBS1$ACTH_result[IBS1$ACTH < 10] <- "LOW"
 
-write.csv(IBS1, "data_output/ACTH_result.csv")
+> write.csv(IBS1, "data_output/ACTH_result.csv")
 ```
 ```
 ##
