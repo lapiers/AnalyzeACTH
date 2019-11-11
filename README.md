@@ -39,7 +39,8 @@ Coefficients:
 
 ```
 
-![ACTH_scatterplot](lapiers/AnalyzeACTH-master/fig_output/ACTH_scatterplot.png?sanitize=true)
+![ACTH_scatterplot](../AnalyzeACTH-master/fig_output/ACTH_scatterplot.png?sanitize=true)
+
 ##
 ##
 ## Boxplots
