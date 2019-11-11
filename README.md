@@ -4,7 +4,8 @@
 
 ## what can we get data from CBC-D results 
 ```
-The ACTH test measures the level of adrenocorticotropic hormone (ACTH) in the blood. ACTH is a hormone released from the pituitary gland in the brain.
+The ACTH test measures the level of adrenocorticotropic hormone (ACTH) in the blood.
+ACTH is a hormone released from the pituitary gland in the brain.
 ```
 ## Normal range og ACTH
 https://www.webmd.com/a-to-z-guides/acth-test
