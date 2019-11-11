@@ -26,11 +26,11 @@ ggplot(IBS1, aes(x=BMI, y=ACTH)) +
 ```
 ##
 ## ANOVA: IBS-subtype vs. Bloodwork parameter
-ACTH.aov <- aov(ACTH ~ IBS.subtype, data = IBS1)
-summary(ACTH.aov)
-sink('data_output/ACTH_anova.txt', append = TRUE)
-print(ACTH.aov)
-sink()
+> ACTH.aov <- aov(ACTH ~ IBS.subtype, data = IBS1)
+> summary(ACTH.aov)
+> sink('data_output/ACTH_anova.txt', append = TRUE)
+> print(ACTH.aov)
+> sink()
 
 
 
