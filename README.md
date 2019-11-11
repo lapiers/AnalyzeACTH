@@ -30,7 +30,7 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 > IBS1$ACTH_result <- "NA"
 ```
 
-```
+
 ## Assign "HIGH", "NORMAL", or "LOW" based on clinical range to the LDH_result parameter
 ##https://www.uptodate.com/contents/measurement-of-acth-crh-and-other-hypothalamic-and-pituitary-peptides
 ```
