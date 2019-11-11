@@ -2,22 +2,23 @@
 ### Single and multiple regressions, and scatterplots for clinical bloodwork and gene expression data.
 ([AnalyzeACTH.R](../AnalyzeACTH-master/scripts/AnalyzeACTH.R)) will allow you to load a RobinsonEtAl_Sup1 .csv with various datapoints, perform single regressions of Body Mass Index (BMI) vs. ACTH from the Complete Blood Count with Differential (CBC-D) results, and produce 2-D scatterplots and boxplots for the results. 
 
-```
+
+
 ``` 
 ##
 ##Normal range og ACTH
 Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to below 5-10 pg/ml at midnight.
-
-```
 ```
 
+
+```
 ## Install necessary packages
 
 > install.packages("ggplot2")
 > library(ggplot2)
-
-
 ```
+
+
 ```
 ## Read data
 > IBS1 <- read.csv("data/RobinsonEtAl_Sup1.csv", header = TRUE)
@@ -27,6 +28,7 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 
 > IBS1$ACTH_result <- "NA"
 ```
+
 ```
 ## Assign "HIGH", "NORMAL", or "LOW" based on clinical range to the LDH_result parameter
 ##https://www.uptodate.com/contents/measurement-of-acth-crh-and-other-hypothalamic-and-pituitary-peptides
@@ -39,7 +41,8 @@ Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to be
 
 > write.csv(IBS1, "data_output/ACTH_result.csv")
 ```
-```
+
+
 ##
 ### Results of ACTH regression, BMI x ACTH
 ```
