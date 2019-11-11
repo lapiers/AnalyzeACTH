@@ -73,8 +73,9 @@ summary(ACTH.regression)
 sink('data_output/ACTH_regression.txt', append = TRUE)
 print(ACTH.regression)
 sink()
-
 ```
+
+
 ```
 ##
 ## ANOVA: IBS-subtype vs. Bloodwork parameter
