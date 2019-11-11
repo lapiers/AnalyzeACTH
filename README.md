@@ -2,9 +2,10 @@
 ### Single and multiple regressions, and scatterplots for clinical bloodwork and gene expression data.
 ([AnalyzeACTH.R](../AnalyzeACTH-master/scripts/AnalyzeACTH.R)) will allow you to load a RobinsonEtAl_Sup1 .csv with various datapoints, perform single regressions of Body Mass Index (BMI) vs. ACTH from the Complete Blood Count with Differential (CBC-D) results, and produce 2-D scatterplots and boxplots for the results. 
 
-
-
-
+## what can we get data from CBC-D results 
+```
+The ACTH test measures the level of adrenocorticotropic hormone (ACTH) in the blood. ACTH is a hormone released from the pituitary gland in the brain.
+```
 ## Normal range og ACTH
 https://www.webmd.com/a-to-z-guides/acth-test
 ```
