@@ -39,7 +39,7 @@ Coefficients:
 
 ```
 
-![ACTH_scatterplot](../AnalyzeACTH/fig_output/ACTH_scatterplot.png?sanitize=true)
+![ACTH_scatterplot](../master/fig_output/ACTH_scatterplot.png?sanitize=true)
 
 ##
 ##
@@ -58,4 +58,4 @@ Coefficients:
 )
 
 ```
-![ACTH_boxplot](../AnalyzeACTH/fig_output/ACTH_boxplot.png?sanitize=true)
+![ACTH_boxplot](../master/fig_output/ACTH_boxplot.png?sanitize=true)
