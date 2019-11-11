@@ -3,10 +3,9 @@
 ([AnalyzeACTH.R](../AnalyzeACTH-master/scripts/AnalyzeACTH.R)) will allow you to load a RobinsonEtAl_Sup1 .csv with various datapoints, perform single regressions of Body Mass Index (BMI) vs. ACTH from the Complete Blood Count with Differential (CBC-D) results, and produce 2-D scatterplots and boxplots for the results. 
 
 
-
+```
 ``` 
-##
-##Normal range og ACTH
+## Normal range og ACTH
 Adults normally have ACTH levels of 10-50 pg/ml at 8 a.m. The number drops to below 5-10 pg/ml at midnight.
 ```
 
