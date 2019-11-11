@@ -57,4 +57,5 @@ Coefficients:
         xlab = "IBS.subtype", ylab = "ACTH"
 )
 
+```
 ![ACTH_boxplot](../AnalyzeACTH/fig_output/ACTH_boxplot.png?sanitize=true)
